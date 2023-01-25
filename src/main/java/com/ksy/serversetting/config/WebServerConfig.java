@@ -1,6 +1,6 @@
 package com.ksy.serversetting.config;
 
-import com.ksy.serversetting.controller.converter.HotelRoomConverter;
+import com.ksy.serversetting.controller.converter.HotelRoomNumberConverter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.MediaType;
@@ -8,11 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.method.HandlerTypePredicate;
-import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.util.UrlPathHelper;
-
-import java.util.List;
 
 @Configuration
 public class WebServerConfig implements WebMvcConfigurer {
@@ -54,6 +51,6 @@ public class WebServerConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(new HotelRoomConverter()); // 컨버터 등록
+        registry.addConverter(new HotelRoomNumberConverter()); // 컨버터 등록
     }
 }

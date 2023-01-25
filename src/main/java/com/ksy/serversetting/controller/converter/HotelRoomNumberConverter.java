@@ -4,7 +4,7 @@ import com.ksy.serversetting.domain.HotelRoomNumber;
 import org.springframework.core.convert.converter.Converter;
 
 //문자열을 객체로 변경
-public class HotelRoomConverter implements Converter<String, HotelRoomNumber> {
+public class HotelRoomNumberConverter implements Converter<String, HotelRoomNumber> {
 
    @Override
     public HotelRoomNumber convert(String source) {
