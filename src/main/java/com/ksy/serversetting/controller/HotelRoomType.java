@@ -14,7 +14,7 @@ public enum HotelRoomType {
     DOUBLE("double"),
     TRIPLE("triple"),
     QUAD("quad");
-    
+
     private static final Map<String, HotelRoomType> paramMap = Arrays.stream(HotelRoomType.values())
             .collect(Collectors.toMap(
                     HotelRoomType::getParam,
